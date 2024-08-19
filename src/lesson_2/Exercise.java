@@ -17,5 +17,7 @@ public class Exercise {
         byte c1 = (byte) (a1 + 2);
 
         System.out.println(c1);
+
+        // Эта фраза нужна специально для коммита + пуша
     }
 }
