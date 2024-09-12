@@ -13,9 +13,6 @@ public class Cat {
         name = "Barsik";
     }
 
-    void meow() {
-        System.out.println("Meow!");
-    }
 
     public void printNameOfCat() {
         System.out.println(name);
@@ -47,6 +44,11 @@ public class Cat {
     int ageOfCat() {
         age = 2;
         return age;
+    }
+
+
+    public static void meow() {
+        System.out.println("Meow!");
     }
 
 
