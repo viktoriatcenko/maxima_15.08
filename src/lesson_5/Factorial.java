@@ -22,14 +22,21 @@ public class Factorial {
         return a1;
     }
 
+    static int count = 1;
+
     public static int getFactorial(int x) {
+        System.out.println("Мы сейчас на " + count + " круге нашей рекурсии");
         if (x == 1) {
             return 1;
         }
         System.out.println("Start of method");
         System.out.println("Current value of x = " + x);
+        count++;
         int result = x * getFactorial(x - 1);
+        System.out.println("Current value of x = " + x);
+        System.out.println("Мы сейчас на " + count + " круге нашей рекурсии");
         System.out.println("Before return value of result is " + result);
+        count--;
         return result;
     }
 

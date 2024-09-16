@@ -25,11 +25,15 @@ public class Main {
 //        System.out.println(namedFlat.getName());
 
 
-
-
+        lesson_6.Cat cat = new lesson_6.Cat();
 
 
         Cat noNameCat = new Cat();
+
+        noNameCat.meowNonStatic();
+
+
+
 
         Cat sherlock = new Cat("Sherlock");
 

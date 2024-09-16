@@ -3,8 +3,8 @@ package lesson_7;
 public class Cat {
 
     // Поля / fields
-    int age;
-    String name;
+    protected int age;
+    private String name;
 
     static int countOfLives;
 
@@ -47,6 +47,10 @@ public class Cat {
     }
 
     public static void meow() {
+        System.out.println("Meow!");
+    }
+
+    void meowNonStatic() {
         System.out.println("Meow!");
     }
 }

@@ -5,7 +5,7 @@ public class Cat {
     // Характеристики
     // Поля / fields
 
-    int age;
+    protected int age;
     String name;
 
     void nameThisCat() {
