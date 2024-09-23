@@ -1,5 +1,7 @@
 package lesson_4;
 
+import lesson_10.model.Cat;
+
 public class Main {
     public static void main(String[] args) {
 //        System.out.println("Hello world!" + 1);
@@ -96,6 +98,23 @@ public class Main {
                 break;
             }
         }
+
+
+        Cat cat = Cat.getSingleCat();
+        cat.setAge(12);
+        cat.setName("Sherlock");
+        System.out.println(cat.getName());
+        System.out.println(cat.getAge());
+
+        cat.setAge(250);
+
+        Cat cat2  = Cat.getSingleCat();
+        System.out.println(cat2.getName());
+        System.out.println(cat2.getAge());
+
+        System.out.println(cat.equals(cat2));
+
+        System.out.println(cat == cat2);
 
     }
 }
