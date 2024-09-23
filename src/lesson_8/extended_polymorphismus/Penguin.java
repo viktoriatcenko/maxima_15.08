@@ -7,4 +7,8 @@ public class Penguin extends Animal {
         super(name);
     }
 
+    public void makeWarmer() {
+        System.out.println("Penguin made warmer");
+    }
+
 }

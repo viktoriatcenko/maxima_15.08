@@ -6,4 +6,8 @@ public class Gepard extends Animal{
         super(name);
     }
 
+    public void makeStronger() {
+        System.out.println("This gepard made stronger");
+    }
+
 }
