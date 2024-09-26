@@ -127,6 +127,17 @@ public class Test {
         // new [10];
         ArrayList aaa = new ArrayList();
 
+        aaa.add(11);
+        aaa.add(11);
+        aaa.add(11);
+        aaa.add(11);
+        aaa.add(11);
+
+        System.out.println();
+
+
+
+
 
 
     }
