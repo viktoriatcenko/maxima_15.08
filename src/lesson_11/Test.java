@@ -8,12 +8,22 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Long startArr = System.currentTimeMillis();
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         for (int i = 0; i < 50000; i++) {
             arrayList.add(i);
         }
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        for (int i = 0; i < 50000; i++) {
+            linkedList.add(i);
+        }
+
+        Long startArr = System.currentTimeMillis();
+
+
+
 
         for (int i = 0; i < 50000; i++) {
             arrayList.add(25000, i);
@@ -23,13 +33,11 @@ public class Test {
 
         System.out.println("For arrList " + (finishArr - startArr));
 
-        LinkedList<Integer> linkedList = new LinkedList<>();
+
 
         Long startLinked = System.currentTimeMillis();
 
-        for (int i = 0; i < 50000; i++) {
-            linkedList.add(i);
-        }
+
 
         for (int i = 0; i < 50000; i++) {
             linkedList.add(25000, i);
