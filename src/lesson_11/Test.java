@@ -46,8 +46,5 @@ public class Test {
         Long finishLinked = System.currentTimeMillis();
 
         System.out.println("For linkedList " + (finishLinked - startLinked));
-
-
-
     }
 }
