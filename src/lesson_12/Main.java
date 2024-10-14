@@ -2,9 +2,7 @@ package lesson_12;
 
 import lesson_12.model.Coin;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,8 +23,26 @@ public class Main {
 
         Coin coin = new Coin();
 
-        ReverseIntegers reverseIntegers = new ReverseIntegers();
-        TreeSet<Integer> treeSet = new TreeSet<>(reverseIntegers);
+
+
+        TreeSet<Integer> treeSet = new TreeSet<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer integer1, Integer integer2) {
+                return integer2 - integer1;
+            }
+        });
+
+        TreeSet<Integer> treeSetWithLambda = new TreeSet<>(
+            (Integer integer1, Integer integer2) -> {
+                return integer2 - integer1;
+            }
+        );
+
+        TreeSet<Integer> treeSetWithLambda1 = new TreeSet<>((Integer o1, Integer o2) -> o2 - o1);
+
+        TreeSet<Integer> treeSetWithLambda2 = new TreeSet<>((o1, o2) -> o2 - o1);
+
+        TreeSet<Integer> treeSetTest = new TreeSet<>((o1, o2) -> o2 - o1);
 
         treeSet.add(851);
         treeSet.add(123);
