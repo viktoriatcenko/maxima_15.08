@@ -1,22 +1,20 @@
 package lesson_13;
 
 import lesson_12.model.Coin;
+import lesson_12.model.Matherial;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
-        Coin coin1 = new Coin(10, 1.5, "Russia", 2004);
-        Coin coin2 = new Coin(2, 1.3, "Belarus", 2018);
-        Coin coin3 = new Coin(1, 1.9, "UK", 2001);
-        Coin coin4 = new Coin(5, 2.1, "Italy", 2002);
-        Coin coin5 = new Coin(10, 1.5, "Russia", 2004);
-        Coin coin6 = new Coin(3, 1.8, "Sweden", 2022);
+        Coin coin1 = new Coin(10, 1.5, "Russia", 1000, Matherial.GOLD);
+        Coin coin2 = new Coin(2, 1.3, "Belarus", 2000, Matherial.GOLD);
+        Coin coin3 = new Coin(1, 1.9, "UK", 500, Matherial.ARGENTHUM);
+        Coin coin4 = new Coin(5, 2.1, "Italy", 619, Matherial.GOLD );
+        Coin coin5 = new Coin(10, 1.5, "Russia", 1500, Matherial.ARGENTHUM);
+        Coin coin6 = new Coin(3, 1.8, "Sweden", 3000, Matherial.GOLD);
 
         ArrayList<Coin> coins = new ArrayList<>();
 
@@ -54,6 +52,15 @@ public class Test {
 
         boolean b = coins.stream()
                 .anyMatch(x -> x.getNominal() == 3);
+
+        Map<Matherial, List<Coin>> grouppedByMath = coins.stream()
+                .collect(Collectors.groupingBy(Coin::getMatherial));
+
+        List<String> list = coins.stream()
+                .map(Coin::getCountry)
+                .toList();
+
+
 
 
         System.out.println(b);

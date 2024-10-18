@@ -1,6 +1,8 @@
 package lesson_12;
 
 import lesson_12.model.Coin;
+import lesson_12.model.Day;
+import lesson_12.model.Matherial;
 
 import java.util.*;
 
@@ -55,12 +57,12 @@ public class Main {
         System.out.println();
 
 
-        Coin coin1 = new Coin(10, 1.5, "Russia", 1000);
-        Coin coin2 = new Coin(2, 1.3, "Belarus", 2000);
-        Coin coin3 = new Coin(1, 1.9, "UK", 500);
-        Coin coin4 = new Coin(5, 2.1, "Italy", 619);
-        Coin coin5 = new Coin(10, 1.5, "Russia", 1500);
-        Coin coin6 = new Coin(3, 1.8, "Sweden", 3000);
+        Coin coin1 = new Coin(10, 1.5, "Russia", 1000, Matherial.GOLD);
+        Coin coin2 = new Coin(2, 1.3, "Belarus", 2000, Matherial.GOLD);
+        Coin coin3 = new Coin(1, 1.9, "UK", 500, Matherial.ARGENTHUM);
+        Coin coin4 = new Coin(5, 2.1, "Italy", 619, Matherial.GOLD );
+        Coin coin5 = new Coin(10, 1.5, "Russia", 1500, Matherial.ARGENTHUM);
+        Coin coin6 = new Coin(3, 1.8, "Sweden", 3000, Matherial.GOLD);
 
         TreeSet<Coin> coins = new TreeSet<>();
 
@@ -70,5 +72,10 @@ public class Main {
         coins.add(coin4);
         coins.add(coin5);
         coins.add(coin6);
+
+        Day mon = Day.MONDAY;
+
+        System.out.println(mon.getRusTitle());
+
     }
 }

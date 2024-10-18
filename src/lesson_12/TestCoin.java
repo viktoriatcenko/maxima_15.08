@@ -1,6 +1,7 @@
 package lesson_12;
 
 import lesson_12.model.Coin;
+import lesson_12.model.Matherial;
 
 import java.util.HashSet;
 
@@ -17,12 +18,12 @@ public class TestCoin {
 
 //        Coin coin = new Coin();
 
-        Coin coin1 = new Coin(10, 1.5, "Russia", 2004);
-        Coin coin2 = new Coin(2, 1.3, "Belarus", 2018);
-        Coin coin3 = new Coin(1, 1.9, "UK", 2001);
-        Coin coin4 = new Coin(5, 2.1, "Italy", 2002);
-        Coin coin5 = new Coin(10, 1.5, "Russia", 2004);
-        Coin coin6 = new Coin(3, 1.8, "Sweden", 2022);
+        Coin coin1 = new Coin(10, 1.5, "Russia", 1000, Matherial.GOLD);
+        Coin coin2 = new Coin(2, 1.3, "Belarus", 2000, Matherial.GOLD);
+        Coin coin3 = new Coin(1, 1.9, "UK", 500, Matherial.ARGENTHUM);
+        Coin coin4 = new Coin(5, 2.1, "Italy", 619, Matherial.GOLD );
+        Coin coin5 = new Coin(10, 1.5, "Russia", 1500, Matherial.ARGENTHUM);
+        Coin coin6 = new Coin(3, 1.8, "Sweden", 3000, Matherial.GOLD);
 
         HashSet<Coin> coins = new HashSet<>();
 

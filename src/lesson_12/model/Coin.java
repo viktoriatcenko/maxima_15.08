@@ -13,8 +13,10 @@ public class Coin implements Comparable<Coin> {
     private Double diameter;
     private String country; // char [] R (50) u (41) s (91)
     private Integer price;
+    private Matherial matherial;
 
-    public Coin(Integer nominal, Double diameter, String country, Integer price) {
+    public Coin(Integer nominal, Double diameter, String country, Integer price, Matherial matherial) {
+        this.matherial = matherial;
         Coin o = this;
         this.nominal = nominal;
         this.diameter = diameter;
@@ -56,6 +58,10 @@ public class Coin implements Comparable<Coin> {
 
     public Coin() {
         super();
+    }
+
+    public Matherial getMatherial() {
+        return matherial;
     }
 
     @Override
