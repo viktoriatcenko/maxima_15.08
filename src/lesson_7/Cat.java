@@ -1,6 +1,7 @@
 package lesson_7;
 
 public class Cat {
+    // Cat cat1 = new Cat()
 
     // Поля / fields
     protected int age;
@@ -52,5 +53,9 @@ public class Cat {
 
     void meowNonStatic() {
         System.out.println("Meow!");
+    }
+
+    private void v() {
+        System.out.println();
     }
 }
