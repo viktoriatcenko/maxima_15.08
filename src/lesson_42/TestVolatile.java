@@ -17,7 +17,7 @@ public class TestVolatile {
 
 class MyThread extends Thread {
 
-    private boolean isRunning = true;
+    private volatile boolean isRunning = true;
 
     @Override
     public void run() {
@@ -25,7 +25,7 @@ class MyThread extends Thread {
             System.out.println("Hello World!");
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
