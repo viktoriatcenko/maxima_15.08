@@ -1,4 +1,4 @@
-package lesson_16;
+package lesson_42;
 
 public class TestFirstSynchronized {
 
@@ -46,7 +46,7 @@ public class TestFirstSynchronized {
 
     private void increment() {
         synchronized (this) {
-            counter++;
+            counter++; // counter = counter + 1
         }
     }
 
